@@ -10,7 +10,7 @@ Collection of accepted and optimized LeetCode solutions Focused on writing clean
 
 ## 📌 Features
 
-- **Progress Tracking**: Automatically syncs solved problems via LeetSync
+- **Progress Tracking**: Automatically syncs solved problems
 - **Clean Submissions**: Only accepted solutions (AC) are committed
 - **Daily Commitment**: Working toward building and maintaining streaks
 - **Pattern Recognition**: Learn through:
