@@ -5,7 +5,7 @@ class Solution:
         n=len(s)
         count={}
         max_count =0
-        
+        longest =0
         while r<len(s):
             count[s[r]] = count.get(s[r],0)+1
             max_count = max(max_count, count[s[r]])
@@ -13,7 +13,7 @@ class Solution:
             while (r-l+1) - max_count> k:
                 count[s[l]]-=1
                 l+=1
-            longest  = max( r-l+1 , max_count)
+            longest  = max( longest,r-l+1 )
             r+=1
 
         return longest
