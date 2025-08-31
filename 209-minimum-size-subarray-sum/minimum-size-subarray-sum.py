@@ -5,15 +5,12 @@ class Solution:
         min_length = float('inf')
         sum1= 0
         while r< len(nums):
-            if l==r and nums[r] >= target:
-                return (1)
-            
             sum1+=nums[r]
             #print('Initial sum1' , sum1)
 
             while sum1>= target:
 
-                min_length = min(min_length, len(nums[l:r+1]))
+                min_length = min(min_length, r-l+1 )
                 # print('Value of r' ,r)
                 # print('target subarray' , nums[l:r+1])
                 # print('Current subarray length' , len(nums[l:r+1]))
