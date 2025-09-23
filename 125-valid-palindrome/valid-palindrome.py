@@ -1,15 +1,14 @@
 class Solution:
     def isPalindrome(self, s: str) -> bool:
-        cleaned_chars = [char for char in s if char.isalnum()]
-        s = "".join(cleaned_chars).lower()
+        s = "".join(char.lower() for char in s if char.isalnum())
         l=0
-        r= len(s)-1
-        flag=True
-        while l<=r:
-            if s[l]==s[r]:
+        r=len(s)-1
+        while l<r:
+            if s[l] ==s[r]:
                 l+=1
                 r-=1
+                continue
             else:
-                flag = False
-                break
-        return flag
+                return False
+
+        return True
