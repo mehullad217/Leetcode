@@ -1,29 +1,24 @@
 class Solution:
     def trap(self, height: List[int]) -> int:
-        nums= height
         leftmax=0
         rightmax=0
         l=0
-        n= len(nums)
+        n=len(height)
         r=n-1
-        total_water =0
-
+        total_water = 0
         for i in range(n):
-            if leftmax <=rightmax:
-                leftmax = max(leftmax,nums[l])
-                # print("leftmaxis" , leftmax )
-                water = max(0,leftmax- nums[l])
-                # print('currentwater', water)
-                # print("l was",l)
+            if leftmax<=rightmax:
+                leftmax = max(leftmax, height[l])
+                water_trapped = max(0, leftmax- height[l])
                 l+=1
-                # print("l increased to",l)
+
             else:
-                rightmax = max(rightmax,nums[r])
-                # print("rightmaxis" , rightmax)
-                water = max(0,rightmax- nums[r])
-                # print('currentwaterfromright', water)
-                # print("r was",r)
+                rightmax = max(rightmax, height[r])
+                water_trapped = max(0, rightmax - height[r])
                 r-=1
 
-            total_water+=water
+            total_water+= water_trapped
+
         return total_water
+                
+        
