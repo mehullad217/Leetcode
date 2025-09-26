@@ -20,10 +20,10 @@ class Solution:
 
         if list1:
             curr.next = list1
-            curr=list1
+
         if list2:
             curr.next = list2
-            curr=list2
+
 
 
         return D.next
