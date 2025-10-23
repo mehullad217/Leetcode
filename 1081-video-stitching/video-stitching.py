@@ -12,6 +12,7 @@ class Solution:
                 furthest_end = max(furthest_end , clips[i][1])
 
                 i+=1
+                
             if furthest_end == max_end:
                 return -1 
             used+=1
