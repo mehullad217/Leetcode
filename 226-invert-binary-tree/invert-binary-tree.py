@@ -9,16 +9,10 @@ class Solution:
         if root is None:
             return
 
-        stk = [root]
-        while stk:
-            node = stk.pop()
-            node.left, node.right = node.right,node.left
+        root.left, root.right = root.right, root.left
 
-            if node.right:
-                stk.append(node.right)
-            if node.left:
-                stk.append(node.left)
+        self.invertTree(root.left)
+        self.invertTree(root.right)
 
-        
         return root
-      
+
