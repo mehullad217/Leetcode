@@ -1,16 +1,15 @@
 class Solution:
     def climbStairs(self, n: int) -> int:
-        memo = {0:0, 1:1 ,2:2}
+        memo = {1:1, 2:2}
 
-        def f(x):
+        def climb(x):
             if x in memo:
                 return memo[x]
+            else:    
+                memo[x] = climb(x-2) +climb(x-1)
+                return memo[x]
 
-            else:
-                memo[x] = f(x-1)+f(x-2)
+        return climb(n)
 
 
-            return memo[x]
 
-        return f(n)
-      
